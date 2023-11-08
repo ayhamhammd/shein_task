@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         val regex = Regex(pattern)
 
-        // Create a WebViewClient to override the onPageFinished method
+        // Create a WebViewClient to override the onLoadResource method
         binding.webView.webViewClient = object : WebViewClient() {
 
             override fun onLoadResource(view: WebView?, url: String?) {
@@ -74,6 +74,8 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    // custom chrome client
     private inner class MyCustomChromeClient : WebChromeClient()
 
     private fun buttonState(){
